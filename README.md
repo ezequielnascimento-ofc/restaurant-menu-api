@@ -1,4 +1,4 @@
-# *API RESTful de Cardápio de Restaurante*
+# Cardápio de Restaurante
 [![Java](https://img.shields.io/badge/Java-17-%23ED8B00?logo=openjdk)](https://jdk.java.net/17/)
 [![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.1.5-%236DB33F?logo=spring)](https://spring.io/projects/spring-boot)
 [![MySQL](https://img.shields.io/badge/MySQL-%234479A1?logo=mysql&logoColor=white)](https://www.mysql.com)
@@ -7,34 +7,26 @@
 [![codecov](https://codecov.io/gh/Ki3lMigu3l/cardapio-api/graph/badge.svg?token=6Y7LUJM8PN)](https://codecov.io/gh/Ki3lMigu3l/cardapio-api)
 
 
-Este é um projeto Full Stack de uma API RESTful para a gestão de cardápios, desenvolvido com Spring no backend, React no frontend, MySQL como banco de dados e Tailwind para estilização. O sistema visa proporcionar uma forma simples de gerenciamento e exibição de itens de cardápio, proporcionando uma experiência intuitiva.
-
-<h2></h2>
+Sistema FullStack para gestão de cardápio de restaurantes. O objetivo foi desenvolver uma API RESTful e uma interface intuitiva para criar, editar, listar e remover itens do cardápio.
+<br>
+<br>
 
 <div align="center">
-  <h3>Principais Tecnologias e Ferramentas</h3>
+  <h2>Tecnologias e Ferramentas utilizadas</h3>
+  <br>
   
-  [![My Skills](https://skillicons.dev/icons?i=git,java,spring,mysql,react,tailwind,docker,idea,postman&perline=9)](https://skillicons.dev)
+  [![My Skills](https://skillicons.dev/icons?i=java,spring,mysql,react,tailwind,docker,idea,postman,git&perline=9)](https://skillicons.dev)
+
+  <br>
 </div>
 
-
-
-
-<h2></h2>
-
-
-
-<div align="center">
-  <h3>Backend</h3>
-
-  [![My Skills](https://skillicons.dev/icons?i=java,spring,mysql&perline=9)](https://skillicons.dev)
-</div>
+<h2 align="center">Backend</h2>
 
 O backend foi desenvolvido com Spring Boot, uma escolha sólida por sua robustez, escalabilidade e forte suporte à construção de APIs RESTful. A estrutura do projeto segue uma arquitetura em camadas, com divisão clara entre controllers, services e repositórios, facilitando a manutenção e os testes. O Spring também oferece integração nativa com JPA e validações, acelerando o desenvolvimento e garantindo boas práticas desde o início.
 
 <br><br>
 <div align="center">
-  <h3> Documentação Swagger (OpenAPI)</h3>
+  <h2> Documentação Swagger (OpenAPI)</h2>
     <img src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/swagger.png" alt="Swagger" width="50"/>
 </div>
 
@@ -46,6 +38,8 @@ O projeto utiliza Swagger, atualmente conhecido como OpenAPI, que é um framewor
   <img src="https://github.com/Ki3lMigu3l/cardapio-api/blob/main/docs/carbon-endpoint-get.png?raw=true" width="800px" />
   <p><em>Endpoint para buscar um item pelo ID.</em></p>
 </div>
+
+<h2></h2>
 
 <br>
 <div align="center">
@@ -84,15 +78,14 @@ Postman é uma ferramenta amplamente utilizada para testes de APIs RESTful. Ele 
   <img src="https://github.com/Ki3lMigu3l/cardapio-api/blob/main/docs/postman-crud.png" width="800px" />
   <p><em>Testes manuais dos endpoints da aplicação com Postman.</em></p>
 </div>
-<h2></h2>
+
+<br>
 
 <div align="center">
-  <h3>FrontEnd</h3>
-  
-  [![My Skills](https://skillicons.dev/icons?i=react,tailwind&perline=8)](https://skillicons.dev)
+  <h2>FrontEnd</h2>
 </div>
 
-O frontend foi desenvolvido com React.js, escolhido por sua modularidade, performance e facilidade na criação de interfaces reativas e reutilizáveis. A estilização utiliza Tailwind CSS, permitindo um desenvolvimento ágil e responsivo com classes utilitárias diretas no markup. Para navegação entre páginas, foi adotado o react-router-dom, viabilizando o roteamento de forma declarativa e eficiente. O consumo da API é feito por meio do Axios, implementado na camada de services, centralizando as requisições e garantindo uma arquitetura mais limpa e organizada.
+O frontend foi desenvolvido em React.js com Tailwind CSS para interfaces rápidas e responsivas. A navegação é feita com React Router DOM e o consumo da API é centralizado no Axios, garantindo organização e escalabilidade.
 
 <div align="center">
 <br>
@@ -120,57 +113,42 @@ O frontend foi desenvolvido com React.js, escolhido por sua modularidade, perfor
   <p><em>Funcionalidade de Edição de Itens do Cardápio</em></p>
 </div>
 
-<h2></h2>
-
-<div align="center">
-<h3>Rodando o Projeto</h3>
-
-  [![My Skills](https://skillicons.dev/icons?i=docker&perline=8)](https://skillicons.dev)
-</div>
-
-Este projeto está completamente containerizado utilizando **Docker** e **Docker Compose**. Você pode iniciar tanto o backend quanto o frontend com um único comando, sem necessidade de instalar Node.js, Java ou dependências adicionais localmente.
-
-<h4>Pré-requisitos</h4>
-
-- [Docker](https://www.docker.com/)
-- [Docker Compose](https://docs.docker.com/compose/)
-
 <br>
 
-Com o Docker e Docker Compose devidamente instalados no seu sistema, você pode subir toda a aplicação com um único comando.
+<h2 align="center"> 🐳 Rodando o Projeto</h2>  
 
-1. Acesse a pasta raiz do projeto, onde está localizado o arquivo docker-compose.yml.
-2. Abra o terminal nessa pasta.
-3. Execute o seguinte comando:
+Este projeto é totalmente containerizado com Docker e Docker Compose, permitindo iniciar backend, frontend e banco de dados com um único comando, sem necessidade de instalar Java, Node.js ou dependências adicionais localmente.  
 
+### Pré-requisitos  
+- Docker instalado
 
-<div align="center"  >
-  
-```bash
-  docker-compose up --build
+### Como executar  
+
+Na raiz do projeto (onde está o arquivo docker-compose.yml), execute:  
+
 ```
-</div>
+docker-compose up --build
+```
 
-Este comando vai construir as imagens Docker do frontend, backend, banco de dados e inicializar todos os containers automaticamente.
+Esse comando irá:  
+- Construir as imagens do frontend, backend e MySQL  
+- Inicializar automaticamente todos os containers necessários
 
-<h2></h2>
+  <br>
 
-<div align="center">
-<h3>Acesso aos serviços</h3>
-</div>
+## Acesso aos Serviços  
 
-Após a execução bem-sucedida do comando acima, os serviços estarão disponíveis nos seguintes endereços:
+Após a inicialização, os serviços estarão disponíveis nos seguintes endereços:  
 
-- 🔙 Backend (API - Spring Boot): http://localhost:8080
-
-- 🎨 Frontend (React + Nginx): http://localhost
-
-- 📘 Swagger UI (Documentação da API): http://localhost:8080/swagger-ui.html
+🔙 **Backend (API - Spring Boot):** http://localhost:8080
+<br>
+🎨 **Frontend (React + Nginx):** http://localhost
+<br>
+📘 **Swagger UI (Documentação da API):** http://localhost:8080/swagger-ui.html
+<br><br>
+O frontend é servido pelo Nginx na porta 80, enquanto o backend opera na porta 8080. 
 
 <br>
-O frontend é servido por um servidor Nginx configurado para rodar na porta 80, enquanto o backend opera na porta 8080.
 
-<h2></h2>
-
-<h3>Objetivo</h3>
-Este projeto tem como objetivo a criação de uma API RESTful para gerenciar um cardápio de restaurante. Ele permite adicionar, editar, remover e listar os itens do cardápio, enquanto oferece uma interface simples e intuitiva para os usuários finais.
+<h2>Objetivo</h2>
+O projeto tem como finalidade o desenvolvimento de uma API RESTful para gerenciamento de cardápios de restaurantes. A aplicação permite criar, atualizar, remover e consultar itens do cardápio, oferecendo uma solução prática para administradores e uma interface simples e intuitiva para os usuários finais.
